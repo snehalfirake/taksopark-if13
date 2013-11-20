@@ -1,5 +1,13 @@
 =Taksopark=
 
+---- 
+Tööga seotud isikud
+
+ * Aleksander Rahnel
+ * Egert Ebruk
+ * Robin Normak
+ * Kaarel Metsaots
+---- 
 ===Rakenduse kasutuseesmärgid===
 
 Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispetšeril luua tellimusi ja siduda neid taksodega.
