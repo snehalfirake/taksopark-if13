@@ -23,9 +23,10 @@ Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispet
 *Avaleht*
  
  * Eraldi kuvad kasutajatüübi põhiselt
- * Adminkeskkond (lubatud kasutajad: Juht,Autoomanik,Admin,Dispetšer)
+ 
+*Kasutajaseaded*
 
-
+*Adminkeskkond*(lubatud kasutajad: Juht,Autoomanik,Admin,Dispetšer)
 
 Firmade ja osakondade statistika (kanade ja puuride arv)
 
