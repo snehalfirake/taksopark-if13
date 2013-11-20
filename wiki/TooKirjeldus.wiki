@@ -7,7 +7,9 @@ Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispet
 ===Rollid===
 
 *Klient* - näeb ülevaateid
+
 *Dispetšer* - registreerib munetud munad
+
 *Autoomanik* - määrab kanade surmapõhjused
 
 Leheküljed
