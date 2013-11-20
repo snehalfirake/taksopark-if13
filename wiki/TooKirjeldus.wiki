@@ -1,14 +1,14 @@
 =Taksopark=
 
-Rakenduse kasutuseesmärgid:
+===Rakenduse kasutuseesmärgid===
 
 Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispetšeril luua tellimusi ja siduda neid taksodega.
 
-Rollid:
+===Rollid===
 
-Klient - näeb ülevaateid
-Dispetšer - registreerib munetud munad
-Autoomanik - määrab kanade surmapõhjused
+*Klient* - näeb ülevaateid
+*Dispetšer* - registreerib munetud munad
+*Autoomanik* - määrab kanade surmapõhjused
 
 Leheküljed
 
