@@ -2,18 +2,18 @@
 
 Rakenduse kasutuseesmärgid:
 
-On reaalajas ülevaade kanadega tegelevatest firmadest, nende struktuurist, kanalate jaotusest. Samuti kanalate sees paiknevatest puuridest, puuris asuvatest kanadest ning puurides munetud munadest. 
+Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispetšeril luua tellimusi ja siduda neid taksodega.
 
 Rollid:
 
-Anonüümne kasutaja - näeb ülevaateid
-Puur - registreerib munetud munad
-Arst - määrab kanade surmapõhjused
-Kanahaldur - lisab tõuge, puure, kanu. Määrab sööda vastavalt puurile. Lisab munade kategooriad. 
-Inimhaldur - lisab kasutajaid, muudab paroole, arhiveerib, lisab firmasid,  osakondi ja kanalaid.
+Klient - näeb ülevaateid
+Dispetšer - registreerib munetud munad
+Autoomanik - määrab kanade surmapõhjused
 
 Leheküljed
 
+*Avaleht*
+ * Tellimuskeskond
 Meldimisleht
 Firmade valik
 Osakonna valik
