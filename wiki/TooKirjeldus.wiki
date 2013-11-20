@@ -4,27 +4,28 @@
 
 Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispetšeril luua tellimusi ja siduda neid taksodega.
 
-===Rollid===
+===Kasutaja rollid===
 
 *Klient* - näeb ülevaateid
 
 *Dispetšer* - registreerib munetud munad
 
+*Juht* - määrab kanade surmapõhjused
+
 *Autoomanik* - määrab kanade surmapõhjused
 
-Leheküljed
+*Admin* - võimalik hallata kõiki määrava tähtsusega tabeleid
+
+===Leheküljed===
+
+*Registreerumine*
 
 *Avaleht*
- * Tellimuskeskond
-Meldimisleht
-Firmade valik
-Osakonna valik
-Kanala valik
-Kanala leht
- Puuride haldus
- Kanade haldus
- Munade lugemine - puur käivitab automaatselt
- Söödahaldus
+ 
+ * Eraldi kuvad kasutajatüübi põhiselt
+ * Adminkeskkond (lubatud kasutajad: Juht,Autoomanik,Admin,Dispetšer)
+
+
 
 Firmade ja osakondade statistika (kanade ja puuride arv)
 
