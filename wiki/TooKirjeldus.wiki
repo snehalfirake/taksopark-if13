@@ -22,62 +22,10 @@ Pakub reaalajas võimalust jälgida millised taksod on tööl. Võimaldab dispet
 
 *Avaleht*
  
- * Eraldi kuvad kasutajatüübi põhiselt
+ * Sisselogimisel eraldi kuvad kasutajatüübi põhiselt
  
 *Kasutajaseaded*
 
-*Adminkeskkond*(lubatud kasutajad: Juht,Autoomanik,Admin,Dispetšer)
+*Adminkeskkond*
 
-Firmade ja osakondade statistika (kanade ja puuride arv)
-
-Kanala statistika (munad suuruste kaupa, kanad tõugude kaupa)
-
-Surmapõhjuste statistika
-
-
-Lehekülgede kujundus
-
-Lehtede üldine kujundus ja paigutus, kõikjal nähtavad osad
-
-Üksikute lehtede paigutus - asendiplaan, kujundusprototüüp
-
-
-Andmebaas
-
-Esialgne struktuur
-Reaalsed andmed esialgsesse struktuuri
-Lehekülgedel tarvilike päringute läbi mängimine
-Päringute ja sisestus/väljastuselementide seostamine
-
-Kujunduse ja andmebaasi ühendamine
-
-Programmikoodi jagamine failide vahel (konfifail, abifunktsioonid)
-
-Lehtede ükshaaval valmis kirjutamine
-Lehestikus usutavate andmetega testimine
-
-Tegelike kasutajate juures testimine, vajalike täienduste lisamine.
-
-
-Grupi suuruseks 2-4
-
-Grupitöö esitamine eksamipäeva hommikul 06, 08.01 2014
-
-Vähemalt kolme seotud tabeliga alamosa esitamine igaühel kodutööna 2-4 detsembril
-
-
-18.11 grupitöö planeerimine
-
-Rühmade moodustamine
-
-Rakenduse üldkirjeldus ja kasutuseesmärgid
-
-Rollid
-
-Leheküljed
-
-Andmebaas
-
-Soovitavalt kogu tegevus SVNi - kaasa arvatud ideekavandid.
-
-Vahetunni lõpuks saatke jaagup@tlu.ee -le SVNi aadressid, kus kirjas grupi liikmete nimekiri ning kavandamise esialgne seis.
+ * Sisselogimisel eraldi kuvad kasutajatüübi põhiselt
