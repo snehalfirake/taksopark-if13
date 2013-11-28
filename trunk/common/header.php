@@ -15,6 +15,12 @@
 </head>
 <body>
 <h1>TaxiApp</h1>
-
+<?php
+    if(isset($userdata->username)){?>
+        <p>you are loged in as <?php echo $userdata->username ?></p>
+    
+    <?php
+    }
+?>
 
    
