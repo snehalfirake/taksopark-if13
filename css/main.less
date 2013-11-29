@@ -1,0 +1,112 @@
+html,body{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:10pt;
+    background:#f2c115;
+    color:#000;
+}
+a{
+    color:#000;
+    &:hover{
+        color:#fff;
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+.container{
+    max-width:640px;
+    min-width: 450px;
+}
+.innerContainer{
+    background:#000;
+    color:#fff;
+    margin:0;
+    padding:30px;
+    .loginForm fieldset{
+        padding:0;
+    }
+}
+#appTitle{
+    text-align: center;
+    margin-bottom:30px;
+    h1{
+        font-size:50pt;
+        letter-spacing: -10px;
+        font-weight: 900;
+        a{
+            text-decoration: none;
+            &:hover{
+                color:#000;
+            }
+        }
+    }
+    p{
+        font-size:125%;
+    }
+}
+.loginForm{
+    background:#000;
+    fieldset{
+        color:#fff;
+        padding:30px;
+        input{
+            width:100%;
+            height:50px;
+            line-height:50px;
+            border:0px;
+            outline: none;
+            font-size:14pt;
+            text-indent:15px;
+            margin-bottom:30px;
+            &:last-child{
+                margin-bottom:0px;
+            }
+        }
+    }
+    
+    button{
+        width:100%;
+        background:orange;
+        border:0px;
+        line-height:60px;
+        color:#fff;
+        font-size:16pt;
+        font-weight: bold;
+        &:hover{
+            background:crimson;
+        }
+    }
+}
+.nav-tabs{
+    border-bottom:0px;
+}
+.nav-tabs>li {
+    background:rgba(0,0,0,0.05);
+    border:0px;
+    border-radius:0px;
+    font-size:125%;
+    font-weight:bold;
+    
+    >a{
+        border:0px;
+        color:#000;
+        line-height:30px;
+        padding:12px 20px;
+    }
+    a:hover{
+        background:none;
+        border-radius:0px;
+        margin-bottom:0px;
+    }
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    background:#000;
+    color:#fff;
+    border:0px;
+    border-radius:0px;
+    margin-bottom:-2px;
+}

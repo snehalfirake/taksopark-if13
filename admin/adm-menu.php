@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<ul>
+<ul class="nav nav-tabs">
     <li><a href="http://localhost/">Home</a></li>
     <li><a href="http://localhost/admin/?action=editUsers">Edit users</a></li>
     <li><a href="http://localhost/admin/?action=editOrders">Edit Orders</a></li>

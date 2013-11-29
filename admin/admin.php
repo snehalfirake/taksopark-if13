@@ -20,7 +20,7 @@
                 break;
             default:
                 # main view
-                include "adm-main.php";
+                header("location:http://localhost/");
                 break;
         }
     }
