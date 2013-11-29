@@ -1,5 +1,10 @@
-<?php
-    echo $userdata->username;
-?>
-<div>this is main view<a href="?action=editUsers">muuda kasutajaid</a></div>
-<a href="logout.php" >Logout</a>
+<div class="innerContainer">
+    <h3>
+    <?php
+        echo "Hello ".$userdata->username."!";
+    ?>
+    </h3>
+    <p>
+        status update goes here, how many unvalidated users and such.
+    </p>
+</div>

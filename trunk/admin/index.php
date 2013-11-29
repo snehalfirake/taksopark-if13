@@ -51,7 +51,7 @@
 		}
 	    }
 	    else{
-		$err.="bad username<br/>";
+		$err.="bad username,";
 	    }
 	    
 	    if(isset($_REQUEST["password"])){
@@ -68,7 +68,7 @@
 		}
 	    }
 	    else{
-		$err.="bad password<br/>";
+		$err.="bad password";
 	    }
 	}
 	if($err){
@@ -99,25 +99,32 @@
 		    }
 		    break;
 		case 'noPass':
-		    echo $err;
+		    
 		    ?>
 		    
-		    <form action="" method="post">
-			<fieldset>
-			    <div>
-				<label for="username">User</label><br>
-				<input type="text" name="username"/>
+		    <!-- Nav tabs -->
+			<ul id="logReg" class="nav nav-tabs">
+			    <li class="active"><a href="#loginTab" data-toggle="tab">Login</a></li>
+			    
+			</ul>
+		    
+		    <!-- Tab panes -->
+			<div class="tab-content">
+			    <div class="tab-pane active" id="loginTab">
+				
+				<form class="loginForm" id="login" action="" method="post">
+				    <fieldset>
+					<?php echo $err; ?>
+					<input type="text" name="username" placeholder="Username"/>
+					<input type="password" name="password" placeholder="Password"/>
+				    </fieldset>
+				    <div>
+					<button type="submit">Log in</button>
+				    </div>
+				</form>
 			    </div>
-			    <div>
-				<label for="password">Password</label><br>
-				<input type="password" name="password"/>
-			    </div>
-			    <div>
-				<button type="submit">Log in</button>
-			    </div>
-			</fieldset>
-		    </form>
-		    <a href="/">back</a>
+			    
+			</div>
 		    
 		    <?php
 		    break;
