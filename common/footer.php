@@ -27,6 +27,7 @@
             e.preventDefault()
             $(this).tab('show')
         });
+       
         $(".nav-tabs li a").each(function(){
             console.log("hello");
             if ($(this).attr("href")==window.location) {

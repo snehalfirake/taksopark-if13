@@ -12,6 +12,40 @@
         switch($action){
             case "editUsers":
                 #for editing users
+                
+                if(isset($_REQUEST["subAct"])){
+                    $subAct=$_REQUEST["subAct"];
+                    switch($subAct){
+                        case 'adduser':
+                            if(isset($_REQUEST["newUsername"]) && isset($_REQUEST["newPass"]) && isset($_REQUEST["newPassRepeat"]) && isset($_REQUEST["newUserType"]) ){
+                                $newUser=$_REQUEST["newUsername"];
+                                $newPass=$_REQUEST["newPass"];
+                                $newPassRepeat=$_REQUEST["newPassRepeat"];
+                                $newUserType=$_REQUEST["newUserType"];
+                                if(empty($newUser)||empty($newPass)||empty($newPassRepeat)){
+                                    echo "empty";
+                                }
+                                else{
+                                    if($newPass==$newPassRepeat){
+                                        echo $newUser." ".$newPass." ".$newPassRepeat." ".$newUserType;
+                                        #add to base
+                                    }
+                                    else{
+                                        echo "passwords dont match";
+                                    }    
+                                }
+                                
+                            }
+                            else{
+                                echo "one or more fields was empty";
+                            }
+                            break;
+                        case 'deleteuser':
+                            break;
+                        case 'updateuser':
+                            break;
+                    }
+                }
                 include("adm-users.php");
                 break;
             case "editOrders":
