@@ -10,5 +10,5 @@
     }
 ?>
 <div class="innerContainer">
-    <p>order a taxi nos</p>
+    <p>order a taxi</p>
 </div>
