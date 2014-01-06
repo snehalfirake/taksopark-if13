@@ -6,23 +6,31 @@
     
     1. Andmebaasi mudeli kohandamine
     2. Andmebaasi if not exists (juhul kui andmebaas on tühi tuleb lisada vajalikud kirjed teatmiku tüüpi tabelitesse nt. usertypes)
-    3. Tellimuste leht
+    3. Dispetšeri view:
+        - Tellimuste kinnitamine
+        - Tellimuste loomine( juhul kui klient on näiteks helistanud )
     
     Robin:
     
     1. Admini ADD/EDIT user
         - delete funktsiooni ei tule, selleks peab EDIT lehel olema võimalik muuta kasutaja aktiivsuse staatust checkboxiga,
-          kindlasti tuleb SELECT käsuga valida userid, kus userid ei vasta hetkel kasutuses olevale userid-le
-    2. Useri view
-        - sisselogitud ja sisselogimata kasutaja vaated. Sisselogitud kasutaja ekraanil kuvatakse vabad tööl olevad taksod ja antakse kasutajal võimalus tellida
+          kindlasti tuleb SELECT käsuga valida kasutajad, kus userID ei vasta hetkel kasutuses olevale userID-le
+    
+    2. Admin ADD/EDIT car
+        - Admin peab saama lisada autosid ja siduda neid juhtidega.
+        
+    3. Useri view
+        - Sisselogitud kasutaja ekraanil kuvatakse vabad tööl olevad taksod ja antakse kasutajal võimalus tellida
           endale takso (mille dišpetser peab muidugi hiljem tellimuseks kinnitama).
+        - sisselogimata kasutajale kuvatakse login formi+registreerimis formi.
     
     Aleksander:
     
     1. Juhi View
-        - Sisselogitud juht näeb ekraanil dišpetseri poolt välja pakutud tellimusi ja saab nendega nõustuda. Sel hetkel eemaldatakse see nimistust ja määratakse
-          tellimus täitmisele. Juht suunatakse peale tellimuse vastuvõtmist uuele lehele kus on vaid üks nupp (sõit lõpetatud). Ehk, tuleb teha kaks andmebaasi uuendust
-          kui juht nõustub tellimusega märgitakse ära millal sõitu alustas ja peale sõidu lõppu sama lugu ainult millal lõpetas.
+        - Sisselogitud juht näeb ekraanil esialgu tööle registreerimis vormi, kust peab valima auto millega ta täna tööd teeb ja sisestama eeldatava tööpäeva lõpu
+          seejärel saab ta valida dišpetseri poolt välja pakutud tellimusi ja saab nendega nõustuda. Sel hetkel eemaldatakse valitud tellimus nimistust ja määratakse
+          tellimus täitmisele. Juht suunatakse peale tellimuse vastuvõtmist uuele lehele kus on vaid üks nupp (sõit lõpetatud). Ehk, tuleb teha kaks
+          andmebaasi uuendust kui juht nõustub tellimusega märgitakse ära millal sõitu alustas ja peale sõidu lõppu sama lugu ainult millal lõpetas.
           
     2.
     
