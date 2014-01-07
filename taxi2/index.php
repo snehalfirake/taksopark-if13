@@ -18,7 +18,7 @@ if(isSet($_REQUEST["uusleht"])){
 	<meta charset="utf-8" />
 <body>
 	<div id="header">
-        <h2>Tere tulemast TaxiGo kodulehele!</h2>
+        <h2>Tere tulemast TaxiGo kodulehele! Registreeri end siin!</h2>
 		<div>
 		<form action="index.php" id="register" method="post">
 <table border="0">
@@ -61,5 +61,18 @@ if(isSet($_REQUEST["uusleht"])){
 </tbody></table>
 </form>
 
+<div class="login">
+      <h1>Logi kasutajasse</h1>
+      <form method="post" action="index.php">
+        <p><input type="text" name="login" value="" placeholder="kasutajanimi"></p>
+        <p><input type="paroolir2si" name="paroolir2si" value="" placeholder="paroolir2si"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Mäleta mu kasutajat siin arvutis
+          </label>
+        </p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      </form>
     </div>
 	<html>
