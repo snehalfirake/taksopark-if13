@@ -38,16 +38,16 @@
         <?php if($_SESSION["roll"]=="kasutaja"): ?>
 		<li><a href="user.php">Esita tellimus siit!</a></li>
 		 <?php endif ?>
-        <?php if($_SESSION["roll"]=="tehnika"): ?>
+        <?php if($_SESSION["roll"]=="dispetser"): ?>
           <li><a href="tehnik.php">Pooleli olevad tööd</a></li>  
         <?php endif ?>
-		<?php if($_SESSION["roll"]=="haldur"): ?>
+		<?php if($_SESSION["roll"]=="autojuht"): ?>
           <li><a href="tehnik.php">Tehnikuleht</a></li>  
         <?php endif ?>
-		<?php if($_SESSION["roll"]=="haldur"): ?>
+		<?php if($_SESSION["roll"]=="admin"): ?>
           <li><a href="valmis.php">Statistika</a></li>
 		  <?php endif ?>
-		  <?php if($_SESSION["roll"]=="haldur"): ?>
+		  <?php if($_SESSION["roll"]=="dispetser"): ?>
           <li><a href="tvv.php">Tehniku määramine</a></li>
 		  <?php endif ?>
       </ul>
