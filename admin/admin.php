@@ -28,7 +28,9 @@
                                 else{
                                     if($newPass==$newPassRepeat){
                                         echo $newUser." ".$newPass." ".$newPassRepeat." ".$newUserType;
-                                        #add to base
+											$addUser=$taxiDB->prepare("INSERT INTO `users` (`username`, `userType`, `password`, `validUser`) VALUES(?, ?, ?, 1)"); # validUser hiljem muuta "0"ks.
+											$addUser->bind_param("sss", $newUser, $newUserType, $newPass);
+											$addUser->execute();
                                     }
                                     else{
                                         echo "passwords dont match";
