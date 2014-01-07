@@ -1,0 +1,13 @@
+CREATE TABLE tellimus(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	kasutajanimi VARCHAR(100),
+	algpunkt VARCHAR(100),
+	lopp_punkt VARCHAR(100),
+	tel_nr INT,
+	kinnitatud INT DEFAULT 0,
+	valmis INT DEFAULT 0
+);
+
+
+
+INSERT INTO tellimus VALUES ('', 'juku','vabakas','mustamäe', '56742180', '', '');
