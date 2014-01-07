@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
+<head>
 <?php
   require_once("konf.php"); 
 $yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
 if(isSet($_REQUEST["Submit"])){
     $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email) VALUES (?, PASSWORD(?), ?, ?, ?)");
-    $kask->bind_param("sssss", $_REQUEST["kasutajanimi"], $_REQUEST["paroolir2si"], $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"]);
+	$kasutajanimiparool=$_REQUEST["kasutajanimi"]."_".$_REQUEST["paroolir2si"];
+    $kask->bind_param("sssss", $_REQUEST["kasutajanimi"], $kasutajanimiparool, $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"]);
     $kask->execute();
 	$yhendus->close();
     header("Location: $_SERVER[PHP_SELF]");
@@ -13,10 +15,9 @@ if(isSet($_REQUEST["Submit"])){
     exit();
   }
 ?>
-</body>
-</html>
-</style>
+
 	<meta charset="utf-8" />
+</head>
 <body>
 	<div id="header">
         <h2>Tere tulemast TaxiGo kodulehele! Registreeri end siin!</h2>
@@ -57,18 +58,8 @@ if(isSet($_REQUEST["Submit"])){
 </tbody></table>
 </form>
 
-<div class="login">
-      <h1>Logi kasutajasse</h1>
-      <form method="post" action="index.php">
-        <p><input type="text" name="login" value="" placeholder="Kasutajanimi"></p>
-        <p><input type="paroolir2si" name="paroolir2si" value="" placeholder="Parool"></p>
-        <p class="remember_me">
-          <label>
-            <input type="checkbox" name="remember_me" id="remember_me">
-            Mäleta mu kasutajat siin arvutis
-          </label>
-        </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
-      </form>
-    </div> 
-	<html>
+		<div id="login">
+			<?php require("login.php"); ?>
+		</div>	
+</body>
+</html>
