@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
 <?php
+  require_once("konf.php"); 
 $yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
-if(isSet($_REQUEST["uusleht"])){
-    $kask=$yhendus->prepare("INSERT INTO kasutaja (kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, ?, ?, ?, ?, ?)");
+if(isSet($_REQUEST["Submit"])){
+    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, ?, ?, ?, ?, ?)");
     $kask->bind_param("ssssss", $_REQUEST["kasutajanimi"], $_REQUEST["paroolir2si"], $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"], $_REQUEST["roll"]);
     $kask->execute();
 	$yhendus->close();
