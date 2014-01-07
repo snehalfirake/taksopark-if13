@@ -1,11 +1,14 @@
 CREATE TABLE kasutaja(
-	kasutajanimi VARCHAR(25) NOT NULL PRIMARY KEY,
-	paroolir2si CHAR(41) NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	kasutajanimi VARCHAR(25) NOT NULL ,
+	paroolir2si CHAR(41),
 	eesnimi VARCHAR(60),
 	perekonnanimi VARCHAR(60),
 	email VARCHAR(100),
-	roll VARCHAR(255) DEFAULT 'kasutaja'
+	roll VARCHAR(255) DEFAULT 'kasutaja',
+	aktiivne INT DEFAULT 1
 );
 
 
-INSERT INTO kasutaja VALUES ('juku', PASSWORD('juku_kala'),'Juku','Kalamees','juku.kalamees@gmail.com', 'tavakasutaja');
+INSERT INTO kasutaja VALUES ('juku', PASSWORD('juku_kala'),'Juku','Kalamees','juku.kalamees@gmail.com', 'kasutaja', '');
+INSERT INTO kasutaja VALUES ('malle', PASSWORD('malle_maasikas'),'Malle','Maasikamutt','malle.maasikamutt@gmail.com', 'kasutaja', '');

@@ -35,10 +35,10 @@
       Tere, <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
       <a href="?lahku=jah">lahku</a>
       <ul>
-        <?php if($_SESSION["roll"]=="dispetser"): ?>
-		<li><a href="toovastu.php">Vastuvõtmine</a></li>
+        <?php if($_SESSION["roll"]=="haldur"): ?>
+		<li><a href="admin.php">Vastuvõtmine</a></li>
 		 <?php endif ?>
-        <?php if($_SESSION["roll"]=="tehnik"): ?>
+        <?php if($_SESSION["roll"]=="tehnika"): ?>
           <li><a href="tehnik.php">Pooleli olevad tööd</a></li>  
         <?php endif ?>
 		<?php if($_SESSION["roll"]=="haldur"): ?>
