@@ -55,12 +55,13 @@ $kask->bind_param("isssi", $_REQUEST["id"], $_REQUEST["kasutajanimi"], $_REQUEST
  $_REQUEST["tel_nr"]);
 $kask->bind_result($id, $kasutajanimi, $algpunkt, $lopp_punkt, $tel_nr);
 $kask->execute();
-if($kask->fetch()){
+if($kask->fetch())
 echo "<h2>".htmlspecialchars($algpunkt)."</h2>";
 echo htmlspecialchars($algpunkt);
 echo htmlspecialchars($lopp_punkt);
 echo htmlspecialchars($tel_nr);
 }
+?>
 </div>
 </body>
 </html>
