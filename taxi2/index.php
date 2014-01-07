@@ -57,7 +57,7 @@ if(isSet($_REQUEST["uusleht"])){
 <tr>
 <td align="right"><input name="Submit" type="submit" value="Submit" /></td>
 </tr>
-
+ 
 </tbody></table>
 </form>
 
