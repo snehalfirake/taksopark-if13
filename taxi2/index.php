@@ -3,8 +3,8 @@
 <?php
 $yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
 if(isSet($_REQUEST["uusleht"])){
-    $kask=$yhendus->prepare("INSERT INTO toolid (toon, tellimiskogus) VALUES (?, ?)");
-    $kask->bind_param("si", $_REQUEST["toon"], $_REQUEST["tellimiskogus"]);
+    $kask=$yhendus->prepare("INSERT INTO kasutaja (kasutajanimi, tparoolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, ?, ?, ?, ?, ?)");
+    $kask->bind_param("ssssss", $_REQUEST["kasutajanimi"], $_REQUEST["paroolir2si"], $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"], $_REQUEST["roll"]);
     $kask->execute();
 	$yhendus->close();
     header("Location: $_SERVER[PHP_SELF]");
@@ -13,43 +13,53 @@ if(isSet($_REQUEST["uusleht"])){
   }
 ?>
 </body>
-</html>index.php
+</html>
+</style>
+	<meta charset="utf-8" />
 <body>
 	<div id="header">
         <h2>Tere tulemast TaxiGo kodulehele!</h2>
 		<div>
-		<p>Esitage oma tellimus taksole siit</p>
-		</div>
-		</style>
-	<meta charset="utf-8" />
-    <div id="menyykiht">
-        <h2>Teated</h2>
-        <ul>
-		  </ul>
-		<a href='?lisamine=jah'>Lisa ...</a>
-    </div>
-    <div id="sisukiht">
-       <?php
-         
-         if(isSet($_REQUEST["lisamine"])){
-           ?>
-             <form action='?'>
-              <input type="hidden" name="uusleht" value="jah" />
-              <h2>Uue tooli lisamine</h2>
-              <dl>
-                <dt>toon:</dt>
-                <dd>
-                 <input type="text" name="toon" />
-                </dd>
-                <dt>tellimiskogus:</dt>
-                <dd>
-                  <textarea rows="20" name="tellimiskogus"></textarea>
-                </dd>
-               </dl>
-               <input type="submit" value="sisesta">
-             </form>
-           <?php
-         }
-       ?>
+		<form action="index.php" id="register" method="post">
+<table border="0">
+<tbody>
+
+<tr>
+<td><label for="kasutajanimi">Kasutajanimi*:</label> </td>
+<td><input id="kasutajanimi" maxlength="45" name="kasutajanimi" type="text" /> </td>
+</tr>
+
+<tr>
+<td><label for="paroolir2si">Parool*:</label></td>
+<td><input id="paroolir2si" maxlength="45" name="paroolir2si" type="paroolir2si" /></td>
+</tr>
+
+<tr>
+<td><label for="eesnimi">Teie eesnimi*: </label> </td>
+<td><input id="eesnimi" maxlength="45" name="eesnimi" type="text" /> </td>
+</tr>
+
+<tr>
+<td><label for="perekonnanimi">Teie perekonnanimi*: </label> </td>
+<td><input id="perekonnanimi" maxlength="45" name="perekonnanimi" type="text" /> </td>
+</tr>
+
+<tr>
+<td><label for="email">Email*:</label> </td>
+<td><input id="email" maxlength="45" name="email" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="roll">Roll*:</label> </td>
+<td><input id="roll" maxlength="45" name="roll" type="text" /> </td>
+</tr>
+
+<tr>
+<td align="right"><input name="Submit" type="submit" value="Submit" /></td>
+</tr>
+
+</tbody></table>
+</form>
+
     </div>
 	<html>
