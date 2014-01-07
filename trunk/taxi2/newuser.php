@@ -2,8 +2,7 @@
 <html>
 <head>
 <?php
-  require_once("konf.php"); 
-$yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
+  require_once("konf.php");
 if(isSet($_REQUEST["Submit"])){
     $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email) VALUES (?, PASSWORD(?), ?, ?, ?)");
 	$kasutajanimiparool=$_REQUEST["kasutajanimi"]."_".$_REQUEST["paroolir2si"];
@@ -22,7 +21,7 @@ if(isSet($_REQUEST["Submit"])){
 	<div id="header">
         <h2>TaxiGo! Registreeri end siin!</h2>
 		<div>
-		<form action="index.php" id="register" method="post">
+		<form action="newuser.php" id="register" method="post">
 <table border="0">
 <tbody>
 
