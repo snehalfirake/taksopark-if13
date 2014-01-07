@@ -4,10 +4,11 @@ CREATE TABLE tellimus(
 	algpunkt VARCHAR(100),
 	lopp_punkt VARCHAR(100),
 	tel_nr INT,
+	autojuht VARCHAR (100),
 	kinnitatud INT DEFAULT 0,
 	valmis INT DEFAULT 0
 );
 
 
 
-INSERT INTO tellimus VALUES ('', 'juku','vabakas','mustamäe', '56742180', '', '');
+INSERT INTO tellimus VALUES ('', 'juku','vabakas','mustamäe', '56742180', '', '', '');

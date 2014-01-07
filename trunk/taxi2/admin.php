@@ -40,6 +40,7 @@ $kask->execute();
 
 while($kask->fetch()){
 $nimi=htmlspecialchars($kasutajanimi);
+
 	echo"<tr>
 	<td>$id</td>
 	<td>$kasutajanimi</td>
@@ -52,17 +53,18 @@ $nimi=htmlspecialchars($kasutajanimi);
 	<td><a href='?aktiivne_id=$id'>Aktiivne</a></td>
 	</tr>";
 }
-<?php
-$kask=$yhendus->prepare("SELECT rollinimi FROM roll");
-$kask->bind_result($rollinimi);
-$kask->execute();
-	<select>
-	<option value="$rollinimi">Roll</option>
-	</select>
-?>
+
+//<?php
+//$kask=$yhendus->prepare("SELECT rollinimi FROM roll");
+//$kask->bind_result($rollinimi);
+//$kask->execute();
+//	<select>
+//	<option value="$rollinimi">Roll</option>
+//	</select>
+// ?>
 
 
-?>
+
 </table>
 </body>
 </html>
