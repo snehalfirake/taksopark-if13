@@ -1,0 +1,116 @@
+@font-face {      font-family: 'kaushan_scriptregular';
+   src: url('kaushanscript-regular-webfont.eot');
+    src: url('kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('kaushanscript-regular-webfont.woff') format('woff'),
+         url('kaushanscript-regular-webfont.ttf') format('truetype'),
+         url('kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');}
+
+
+body{
+background-color:yellow;
+background-repeat: no-repeat;
+background-position:1366px 100px;
+background-attachment: fixed;
+color:#E6E600
+font-family: 'kaushan_scriptregular';
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 1793px;
+}
+header {
+color: #444;
+width: 1250px;
+float: left;
+padding: 9px;
+border: 1px solid #ccc;
+height: 75px;
+margin: 10px 0px 5px 0px;
+background: rgba(0, 0, 0, 0.5);
+background-image: url(pildid/taxigo1.jpg);
+}
+
+
+h1 {
+color: #B8B5A4;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+p{
+	
+font-family: Helvetica, Arial, sans-serif;
+    line-height: 15pt;
+text-indent: 1.5em;
+}
+
+section{
+background-color:#ffffff;
+background-image: url(./pildid/top_right_01_transparent.png),url(pildid/bottom_right_01_transparent.png);
+background-repeat: no-repeat;
+background-position: top right, bottom right;
+background-origin: content-box;
+margin: 20px;
+padding: 20px;
+width: 1000px;
+
+/* borders */
+/*border-style: none;*/
+border-style: groove;
+border-width: 10px;
+border-color: #ff315e;
+border-color: grey;
+border-right-color: black;
+border-bottom-left-radius: 20px;
+border-top-left-radius: 20px;
+border-radius: 10px;
+}
+
+table{
+	font-family: Helvetica, Arial, sans-serif;
+	background-color:#bbeeff;
+}
+
+ol, li, dl{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+#meedia
+{
+	background-image:none;
+}
+
+
+
+img
+{
+	border-image: url(pildid/raam_02_2.png) 20 round;
+	border-width: 10px;
+}
+
+footer img
+{
+border: none;
+}
+
+section, h1, ul, address
+{
+	margin-left:45px;
+}
+
+.yldine
+{
+	position: absolute;
+	top: 100px;
+	left: 220px;
+}
+
+.veerud
+{
+	width: 800px;
+}
+
