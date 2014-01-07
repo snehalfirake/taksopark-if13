@@ -7,11 +7,8 @@
 
 <a href="?action=adduser">lisa kasutaja</a>
 <a href="?action=edituser">muuda kasutajaid</a>
-<a href="?action=deleteuser">kustuta kasutajaid</a>
-<a href="?action=addorder">lisa tellimus</a>
-<a href="?action=editorder">muuda tellimusi</a>
-<a href="?action=addorder">lisa auto</a>
-<a href="?action=editorder">muuda autot</a>
+<a href="?action=addcar">lisa auto</a>
+<a href="?action=editcar">muuda autot</a>
 
 <?php
 
