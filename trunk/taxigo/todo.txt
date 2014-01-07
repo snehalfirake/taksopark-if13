@@ -1,25 +1,32 @@
 
 
 ### TODO
-
+    
+    PS: mingit CSS jama teilt ei oota, tehke lihtsalt vajalik loogika ja output mõistlikult ära
+    
+    
     Egert:
     
     1. Andmebaasi mudeli kohandamine
     2. Andmebaasi if not exists (juhul kui andmebaas on tühi tuleb lisada vajalikud kirjed teatmiku tüüpi tabelitesse nt. usertypes)
+        -  db.php's on ka mingi näite laadne asi.
+        
     3. Dispetšeri view:
         - Tellimuste kinnitamine
         - Tellimuste loomine( juhul kui klient on näiteks helistanud )
     
     Robin:
     
-    1. Admini ADD/EDIT user
+    1. Admini ADD/EDIT user ( actions/adduser.php )
+        - mõtle ise kindlasti kumbapidi sul targem on teha, kas teha kaks erinevat lehte kasutaja lisamiseks ja muutmiseks või üks ainus.
         - delete funktsiooni ei tule, selleks peab EDIT lehel olema võimalik muuta kasutaja aktiivsuse staatust checkboxiga,
           kindlasti tuleb SELECT käsuga valida kasutajad, kus userID ei vasta hetkel kasutuses olevale userID-le
     
     2. Admin ADD/EDIT car
+        - mõtle ise kindlasti kumbapidi sul targem on teha, kas teha kaks erinevat lehte kasutaja lisamiseks ja muutmiseks või üks ainus.
         - Admin peab saama lisada autosid ja siduda neid juhtidega.
         
-    3. Useri view
+    3. Useri view (user/user-main.php)
         - Sisselogitud kasutaja ekraanil kuvatakse vabad tööl olevad taksod ja antakse kasutajal võimalus tellida
           endale takso (mille dišpetser peab muidugi hiljem tellimuseks kinnitama).
         - sisselogimata kasutajale kuvatakse login formi+registreerimis formi.
@@ -31,6 +38,4 @@
           seejärel saab ta valida dišpetseri poolt välja pakutud tellimusi ja saab nendega nõustuda. Sel hetkel eemaldatakse valitud tellimus nimistust ja määratakse
           tellimus täitmisele. Juht suunatakse peale tellimuse vastuvõtmist uuele lehele kus on vaid üks nupp (sõit lõpetatud). Ehk, tuleb teha kaks
           andmebaasi uuendust kui juht nõustub tellimusega märgitakse ära millal sõitu alustas ja peale sõidu lõppu sama lugu ainult millal lõpetas.
-          
-    2.
     
