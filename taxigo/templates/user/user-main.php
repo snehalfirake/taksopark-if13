@@ -8,6 +8,8 @@
         echo "this is for logged in user";
     }
     if($usertype==""){
+        
+        ## ask for a login form
         include($sitevar->actionsPath."login.php");  
     }
 
