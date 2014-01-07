@@ -39,16 +39,13 @@
 		<li><a href="user.php">Esita tellimus siit!</a></li>
 		 <?php endif ?>
         <?php if($_SESSION["roll"]=="dispetser"): ?>
-          <li><a href="tehnik.php">Pooleli olevad tööd</a></li>  
+          <li><a href="disp.php">Dispetseri leht</a></li>  
         <?php endif ?>
 		<?php if($_SESSION["roll"]=="autojuht"): ?>
-          <li><a href="tehnik.php">Tehnikuleht</a></li>  
+          <li><a href="driver.php">Autojuhi leht</a></li>  
         <?php endif ?>
 		<?php if($_SESSION["roll"]=="admin"): ?>
-          <li><a href="valmis.php">Statistika</a></li>
-		  <?php endif ?>
-		  <?php if($_SESSION["roll"]=="dispetser"): ?>
-          <li><a href="tvv.php">Tehniku määramine</a></li>
+          <li><a href="admin.php">Administraator</a></li>
 		  <?php endif ?>
       </ul>
     <?php else: ?>
