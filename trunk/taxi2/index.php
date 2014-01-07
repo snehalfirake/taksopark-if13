@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+	<link rel="stylesheet" type="text/css" href="stiil.css">
 		<title>TaxiGO</title>
 		<meta charset="utf-8" />
 	</head>	
