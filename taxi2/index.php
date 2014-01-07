@@ -4,7 +4,7 @@
   require_once("konf.php"); 
 $yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
 if(isSet($_REQUEST["Submit"])){
-    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, ?, ?, ?, ?, ?)");
+    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, PASSWORD(?), ?, ?, ?, ?)");
     $kask->bind_param("ssssss", $_REQUEST["kasutajanimi"], $_REQUEST["paroolir2si"], $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"], $_REQUEST["roll"]);
     $kask->execute();
 	$yhendus->close();
@@ -32,7 +32,7 @@ if(isSet($_REQUEST["Submit"])){
 
 <tr>
 <td><label for="paroolir2si">Parool*:</label></td>
-<td><input id="paroolir2si" maxlength="45" name="paroolir2si" type="paroolir2si" /></td>
+<td><input id="paroolir2si" maxlength="45" name="paroolir2si" type="password" /></td>
 </tr>
 
 <tr>

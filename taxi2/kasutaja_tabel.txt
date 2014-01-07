@@ -1,9 +1,9 @@
 CREATE TABLE kasutaja(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	kasutajanimi VARCHAR(100),
-	paroolir2si CHAR(41),
+	paroolir2si CHAR(41) NOT NULL,
 	eesnimi VARCHAR(60),
-	perekonnanimi VARCHAR(60
+	perekonnanimi VARCHAR(60),
 	email VARCHAR(60),
 	roll VARCHAR(100)
 );
