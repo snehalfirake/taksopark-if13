@@ -61,6 +61,7 @@
         <dd><input type="submit" value="Sisesta" /></dd>
       </dl>
      </form>
+	 <p>Pole veel kasutaja? Registreeri ennast <a href="newuser.php">SIIN!</a></p>
     <?php endif ?>
 	</section>
   </body>
