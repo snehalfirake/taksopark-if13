@@ -1,6 +1,6 @@
 <?php
 session_start();
-  if(!($_SESSION["roll"]=="dispetser")){
+  if(!($_SESSION["roll"]=="admin")){
     header("Location: login.php");
 	exit();
   }
