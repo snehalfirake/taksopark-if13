@@ -1,6 +1,6 @@
 <?php
 session_start();
-  if(!($_SESSION["roll"]=="autojuht")){
+  if(!($_SESSION["roll"]=="autojuht" OR $_SESSION["roll"]=="admin")){
     header("Location: login.php");
 	exit();
   }
