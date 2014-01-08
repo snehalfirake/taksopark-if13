@@ -23,9 +23,7 @@ exit();
  <title>Tellimine</title>
  </head>
  <body>
-    <?php if(isSet($_SESSION["kasnimi"])): ?>
-      Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
-      <a href="?lahku=jah">lahku</a>
+ Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
  <h1>Takso tellimine</h1>
      <?php
 	  if(isSet($_REQUEST["Algpunkt"])){
