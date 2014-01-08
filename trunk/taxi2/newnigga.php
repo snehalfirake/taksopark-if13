@@ -21,7 +21,7 @@ if(isSet($_REQUEST["Submit"])){
 	<div id="header">
         <h2>Lisa uus tooline</h2>
 		<div>
-		<form action="newuser.php" id="register" method="post">
+		<form action="newnigga.php" id="register" method="post">
 <table border="0">
 <tbody>
 
@@ -52,7 +52,7 @@ if(isSet($_REQUEST["Submit"])){
 
 <tr>
 <td><label for="roll">Roll*:</label> </td>
-<td><input id="roll" maxlength="45" name="roll" type="text" /></td>
+<td><input id="roll" maxlength="20" name="roll" type="text" /></td>
 </tr>
 
 <tr>
