@@ -1,14 +1,12 @@
 <!doctype html>
 <html>
 <head>
-	<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
-	<link rel="stylesheet" type="text/css" href="stiil.css">
 <?php
   require_once("konf.php");
 if(isSet($_REQUEST["Submit"])){
-    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email) VALUES (?, PASSWORD(?), ?, ?, ?)");
+    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, PASSWORD(?), ?, ?, ?, ?)");
 	$kasutajanimiparool=$_REQUEST["kasutajanimi"]."_".$_REQUEST["paroolir2si"];
-    $kask->bind_param("sssss", $_REQUEST["kasutajanimi"], $kasutajanimiparool, $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"]);
+    $kask->bind_param("sssssi", $_REQUEST["kasutajanimi"], $kasutajanimiparool, $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"], "kasutaja");
     $kask->execute();
 	$yhendus->close();
     header("Location: $_SERVER[PHP_SELF]");
@@ -22,7 +20,6 @@ if(isSet($_REQUEST["Submit"])){
 <body>
 	<div id="header">
         <h2>TaxiGo! Registreeri end siin!</h2>
-		<a href="index.php">Avaleht</a>
 		<div>
 		<form action="newuser.php" id="register" method="post">
 <table border="0">

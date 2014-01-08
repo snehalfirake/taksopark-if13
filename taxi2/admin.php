@@ -76,6 +76,9 @@ $nimi=htmlspecialchars($kasutajanimi);
 
 
 </table>
+		<div id="login">
+			<?php require("newnigga.php"); ?>
+		</div>
 </body>
 </html>
 <?php
