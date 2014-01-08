@@ -1,68 +1,56 @@
 <?php
-$yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
-if(isSet($_REQUEST["uusleht"])){
-$kask=$yhendus->prepare("INSERT INTO tellimus (autojuht) VALUES (?)");
-$kask->bind_param("s", $_REQUEST["autojuht"]);
+session_start();
+  if(!($_SESSION["roll"]=="autojuht")){
+    header("Location: login.php");
+	exit();
+  }
+
+require('konf.php');
+if(isSet($_REQUEST["kinnitamise_id"])){
+$kask=$yhendus->prepare("UPDATE tellimus SET vastuvoetud=1 WHERE id=?");
+$kask->bind_param("i", $_REQUEST["kinnitamise_id"]);
 $kask->execute();
-header("Location: $_SERVER[PHP_SELF]");
-$yhendus->close();
-exit();
 }
 ?>
 <!doctype html>
 <html>
 <head>
-<title>Autojuht</title>
-<style type="text/css">
-#menyykiht{
-float: left;
-padding-right: 170px;
-padding-top: 100px;
-}
-#sisukiht{
-float:left;
-padding-left: 300px;
-padding-top: 100px;
-}
-#jalusekiht{
-clear: left;
-padding-top: 30px;
-padding-left: 250px;
-}
-</style>
+<title>Dispetser</title>
 </head>
 <body>
-<div id="menyykiht">
-<h2>Tellimuste vastuvõtt</h2>
-<ul>
+ Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
+<h1>Kinnita tellimusi</h1>
+<table border="1">
+ <tr>
+	<th>Kliendi ID</th> 
+	<th>Kliendi nimi</th> 
+	<th>Algpunkt</th> 
+	<th>Lõpp punkt</th> 
+	<th>Tel. Nr</th>
+	<th>Kinnitus</th> 
+	<th>Vastuvõtt</th> 	
+</tr>
 <?php
-$kask=$yhendus->prepare("SELECT id, algpunkt FROM tellimus");
-$kask->bind_result($id, $algpunkt);
+$kask=$yhendus->prepare("SELECT id, kasutajanimi, algpunkt, lopp_punkt, tel_nr, kinnitatud, vastuvoetud FROM tellimus WHERE kinnitatud=1");
+$kask->bind_result($id, $kasutajanimi, $algpunkt, $lopp_punkt, $tel_nr, $kinnitatud, $vastuvoetud);
 $kask->execute();
+
 while($kask->fetch()){
-echo "<li><a href='?id=$id'>".
-htmlspecialchars($algpunkt)."</a></li>";
+$kliendinimi=htmlspecialchars($kasutajanimi);
+echo "<tr>
+<td>$id</td>
+<td>$kasutajanimi</td>
+<td>$algpunkt</td>
+<td>$lopp_punkt</td>
+<td>$tel_nr</td>
+<td>$kinnitatud</td>
+<td>$vastuvoetud</td>
+<td><a href='?kinnitamise_id=$id'>Võta vastu</a></td>
+</tr>";
+
 }
 ?>
-</ul>
-</div>
-<div id="sisukiht">
-<?php
-if(isSet($_REQUEST["id"])){
-$kask=$yhendus->prepare("SELECT id, kasutajanimi, algpunkt, lopp_punkt, tel_nr, FROM tellimus
-");
-$kask->bind_param("isssi", $_REQUEST["id"], $_REQUEST["kasutajanimi"], $_REQUEST["algpunkt"], $_REQUEST["lopp_punkt"],
- $_REQUEST["tel_nr"]);
-$kask->bind_result($id, $kasutajanimi, $algpunkt, $lopp_punkt, $tel_nr);
-$kask->execute();
-if($kask->fetch())
-echo "<h2>".htmlspecialchars($algpunkt)."</h2>";
-echo htmlspecialchars($algpunkt);
-echo htmlspecialchars($lopp_punkt);
-echo htmlspecialchars($tel_nr);
-}
-?>
-</div>
+</table>
 </body>
 </html>
 <?php

@@ -1,4 +1,10 @@
 <?php
+session_start();
+  if(!($_SESSION["roll"]=="dispetser")){
+    header("Location: login.php");
+	exit();
+  }
+
 require('konf.php');
 if(isSet($_REQUEST["kinnitamise_id"])){
 $kask=$yhendus->prepare("UPDATE tellimus SET kinnitatud=1 WHERE id=?");
@@ -12,6 +18,7 @@ $kask->execute();
 <title>Dispetser</title>
 </head>
 <body>
+ Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
 <h1>Kinnita tellimusi</h1>
 <table border="1">
  <tr>
