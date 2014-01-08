@@ -18,7 +18,7 @@ exit();
 <!doctype html>
 <html>
  <head>
- <link rel="stylesheet" type="text/css" href="kujundus.css">
+ <link rel="stylesheet" type="text/css" href="stiil.css">
  <title>Tellimine</title>
  </head>
  <body>
