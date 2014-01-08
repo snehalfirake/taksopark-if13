@@ -4,10 +4,15 @@
 <?php
   require_once("konf.php");
 if(isSet($_REQUEST["Submit"])){
-    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email, roll) VALUES (?, PASSWORD(?), ?, ?, ?, kasutaja)");
+    $kask=$yhendus->prepare("INSERT INTO kasutaja(kasutajanimi, paroolir2si, eesnimi, perekonnanimi, email) VALUES (?, PASSWORD(?), ?, ?, ?)");
 	$kasutajanimiparool=$_REQUEST["kasutajanimi"]."_".$_REQUEST["paroolir2si"];
     $kask->bind_param("sssss", $_REQUEST["kasutajanimi"], $kasutajanimiparool, $_REQUEST["eesnimi"], $_REQUEST["perekonnanimi"], $_REQUEST["email"]);
     $kask->execute();
+
+	$kask=$yhendus->prepare(
+	  "UPDATE kasutaja SET roll='kasutaja' WHERE roll IS NULL");
+	$kask->execute();
+	
 	$yhendus->close();
     header("Location: $_SERVER[PHP_SELF]");
     
