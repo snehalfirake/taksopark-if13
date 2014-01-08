@@ -20,6 +20,7 @@ $kask->execute();
 </head>
 <body>
  Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
+      <a href="?lahku=jah">lahku</a>
 <h1>Kinnita tellimusi</h1>
 <table border="1">
  <tr>
