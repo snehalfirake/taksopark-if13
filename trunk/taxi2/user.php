@@ -24,7 +24,7 @@ exit();
  </head>
  <body>
  Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
- <a href="?lahku=jah">lahku</a>
+  <a href="index.php">avaleht</a>
  <h1>Takso tellimine</h1>
      <?php
 	  if(isSet($_REQUEST["Algpunkt"])){
