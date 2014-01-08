@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+	<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
+	<link rel="stylesheet" type="text/css" href="stiil.css">
 <?php
   require_once("konf.php");
 if(isSet($_REQUEST["Submit"])){
