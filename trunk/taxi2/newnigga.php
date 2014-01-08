@@ -20,6 +20,11 @@ if(isSet($_REQUEST["Submit"])){
 <body>
 	<div id="header">
         <h2>Lisa uus tooline</h2>
+		<?php
+	  if(isSet($_REQUEST["kasutajanimi"])){
+	   echo "Teie tellimus alguspunktist $_REQUEST[kasutajanimi] oli edukas!";
+	  }
+    ?>	
 		<div>
 		<form action="newnigga.php" id="register" method="post">
 <table border="0">
