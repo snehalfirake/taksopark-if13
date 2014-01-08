@@ -11,6 +11,7 @@ $kask=$yhendus->prepare("UPDATE tellimus SET kinnitatud=1 WHERE id=?");
 $kask->bind_param("i", $_REQUEST["kinnitamise_id"]);
 $kask->execute();
 }
+
 ?>
 <!doctype html>
 <html>
