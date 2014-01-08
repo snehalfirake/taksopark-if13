@@ -30,15 +30,24 @@ $kask->execute();
 <!doctype html>
 <html>
 <head>
-	<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
-	<link rel="stylesheet" type="text/css" href="stiil.css">
+<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
+<link rel="stylesheet" type="text/css" href="stiil.css">
 <title>Administraator</title>
 </head>
 <body>
 Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
        <a href="index.php">Avaleht</a>
 <h1>Administraatori leht</h1>
-<table>
+<table border="1">
+ <tr>
+	<th>ID</th> 
+	<th>Kasutajanimi</th> 
+	<th>Eesnimi</th> 
+	<th>Perekonnanimi</th> 
+	<th>E-mail</th>
+	<th>Roll</th> 	
+	<th>Aktiivne</th> 	
+</tr>
 <?php
 $kask=$yhendus->prepare("SELECT id, kasutajanimi, eesnimi, perekonnanimi, email, roll, aktiivne FROM kasutaja");
 $kask->bind_result($id, $kasutajanimi, $eesnimi, $perekonnanimi, $email, $roll, $aktiivne);
@@ -50,8 +59,7 @@ $kask->execute();
 
 while($kask->fetch()){
 $nimi=htmlspecialchars($kasutajanimi);
-
-	echo"<tr>
+echo"<tr>
 	<td>$id</td>
 	<td>$kasutajanimi</td>
 	<td>$eesnimi</td>
@@ -61,7 +69,7 @@ $nimi=htmlspecialchars($kasutajanimi);
 	<td>$aktiivne</td>
 	<td><a href='?mitteaktiivne_id=$id'>Mitteaktiivne</a></td>
 	<td><a href='?aktiivne_id=$id'>Aktiivne</a></td>
-	</tr>";
+</tr>";
 }
 
 //<?php
@@ -72,9 +80,6 @@ $nimi=htmlspecialchars($kasutajanimi);
 //	<option value="$rollinimi">Roll</option>
 //	</select>
 // ?>
-
-
-
 </table>
 		<div id="login">
 			<?php require("newnigga.php"); ?>

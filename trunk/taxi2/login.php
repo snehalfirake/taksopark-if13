@@ -32,13 +32,13 @@
       Tere, <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
       <a href="?lahku=jah">lahku</a>
       <ul>
-        <?php if($_SESSION["roll"]=="kasutaja"): ?>
+        <?php if($_SESSION["roll"]=="kasutaja" OR $_SESSION["roll"]=="admin"): ?>
 		<li><a href="user.php">Esita tellimus siit!</a></li>
 		 <?php endif ?>
-        <?php if($_SESSION["roll"]=="dispetser"): ?>
+        <?php if($_SESSION["roll"]=="dispetser" OR $_SESSION["roll"]=="admin"): ?>
           <li><a href="disp.php">Dispetseri leht</a></li>  
         <?php endif ?>
-		<?php if($_SESSION["roll"]=="autojuht"): ?>
+		<?php if($_SESSION["roll"]=="autojuht" OR $_SESSION["roll"]=="admin"): ?>
           <li><a href="driver.php">Autojuhi leht</a></li>  
         <?php endif ?>
 		<?php if($_SESSION["roll"]=="admin"): ?>
