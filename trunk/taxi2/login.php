@@ -27,7 +27,7 @@
  <link rel="stylesheet" type="text/css" href="kujundus.css">
  <meta charset="UTF-8">
 
-     <title>Parandus log in</title>
+     <title>TaxiGO log in</title>
   </head>
   <body>
   <section id="list">
