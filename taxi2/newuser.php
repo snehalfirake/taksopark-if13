@@ -22,6 +22,7 @@ if(isSet($_REQUEST["Submit"])){
 <body>
 	<div id="header">
         <h2>TaxiGo! Registreeri end siin!</h2>
+		<a href="index.php">avaleht</a>
 		<div>
 		<form action="newuser.php" id="register" method="post">
 <table border="0">
