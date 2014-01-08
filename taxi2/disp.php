@@ -11,7 +11,6 @@ $kask=$yhendus->prepare("UPDATE tellimus SET kinnitatud=1 WHERE id=?");
 $kask->bind_param("i", $_REQUEST["kinnitamise_id"]);
 $kask->execute();
 }
-
 ?>
 <!doctype html>
 <html>
@@ -20,7 +19,7 @@ $kask->execute();
 </head>
 <body>
  Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
-      <a href="?lahku=jah">lahku</a>
+       <a href="index.php">avaleht</a>
 <h1>Kinnita tellimusi</h1>
 <table border="1">
  <tr>
