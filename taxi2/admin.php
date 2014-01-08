@@ -1,4 +1,10 @@
 <?php
+session_start();
+  if(!($_SESSION["roll"]=="dispetser")){
+    header("Location: login.php");
+	exit();
+  }
+
 $yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
 if(isSet($_REQUEST["mitteaktiivne_id"])){
 $kask=$yhendus->prepare("UPDATE kasutaja SET aktiivne=0 WHERE id=?");
@@ -10,16 +16,6 @@ $kask=$yhendus->prepare("UPDATE kasutaja SET aktiivne=1 WHERE id=?");
 $kask->bind_param("i", $_REQUEST["aktiivne_id"]);
 $kask->execute();
 }
- //if(isSet($_REQUEST["peitmise_nullid_id"])){
-//$kask=$yhendus->prepare("UPDATE kohvi SET avalik=0 WHERE topsepakis<1");
-//$kask->bind_param("i", $_REQUEST["peitmise_nullid_id"]);
-//$kask->execute();
-//}
-// if(isSet($_REQUEST["avamise_nullid_id"])){
-//$kask=$yhendus->prepare("UPDATE kasutaja SET avalik=1 WHERE topsepakis<0");
-//$kask->bind_param("i", $_REQUEST["avamise_nullid_id"]);
-//$kask->execute();
-//}
 ?>
 <!doctype html>
 <html>
@@ -27,6 +23,7 @@ $kask->execute();
 <title>Administraator</title>
 </head>
 <body>
+ Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
 <h1>Administraatori leht</h1>
 <table>
 <?php
