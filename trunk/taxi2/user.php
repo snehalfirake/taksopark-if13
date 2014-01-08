@@ -12,6 +12,7 @@ session_start();
 $kask->bind_param("ssss", $_SESSION["kasnimi"], $_REQUEST["algpunkt"], $_REQUEST["sihtpunkt"], $_REQUEST["telefon"]);
 $kask->execute();
 $yhendus->close();
+header("Location: $_SERVER[PHP_SELF]?Algpunkt=$_REQUEST[algpunkt]");
 exit();
  }
 ?>
@@ -24,6 +25,12 @@ exit();
  <body>
  Sisse logitud <?php echo $_SESSION["roll"]." ".$_SESSION["kasnimi"]; ?>
  <h1>Takso tellimine</h1>
+     <?php
+	  if(isSet($_REQUEST["Algpunkt"])){
+	   echo "Teie tellimus alguspunktist $_REQUEST[Algpunkt] oli edukas!";
+	  }
+    ?>	
+ 
  <?php
  if(isSet($_REQUEST["id"])){
  }
