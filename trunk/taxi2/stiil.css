@@ -14,20 +14,13 @@ background-attachment: fixed;
 color:#E6E600
 font-family: 'kaushan_scriptregular';
 }
-#wrapper { 
- margin: 0 auto;
- width: 1793px;
-}
+
 header {
-color: #444;
-width: 1250px;
-float: left;
-padding: 9px;
-border: 1px solid #ccc;
-height: 75px;
-margin: 10px 0px 5px 0px;
-background: rgba(0, 0, 0, 0.5);
-background-image: url(pildid/taxigo1.jpg);
+	display: block;
+	padding: 39px 0 0;
+	z-index: 999;
+	background:#FF8000;
+	background-position: centre;
 }
 
 
@@ -48,7 +41,6 @@ text-indent: 1.5em;
 
 section{
 background-color:#ffffff;
-background-image: url(./pildid/top_right_01_transparent.png),url(pildid/bottom_right_01_transparent.png);
 background-repeat: no-repeat;
 background-position: top right, bottom right;
 background-origin: content-box;
@@ -79,38 +71,17 @@ ol, li, dl{
 
 
 
-#meedia
-{
-	background-image:none;
-}
-
-
-
 img
 {
 	border-image: url(pildid/raam_02_2.png) 20 round;
 	border-width: 10px;
 }
 
-footer img
-{
-border: none;
-}
+
 
 section, h1, ul, address
 {
 	margin-left:45px;
 }
 
-.yldine
-{
-	position: absolute;
-	top: 100px;
-	left: 220px;
-}
-
-.veerud
-{
-	width: 800px;
-}
 
