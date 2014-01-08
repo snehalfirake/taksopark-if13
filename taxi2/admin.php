@@ -1,4 +1,10 @@
 <?php
+session_start();
+  if(!($_SESSION["roll"]=="admin")){
+    header("Location: login.php");
+	exit();
+  }
+
 $yhendus=new mysqli("localhost", "if13", "ifikad", "if13_egert_k");
 if(isSet($_REQUEST["mitteaktiivne_id"])){
 $kask=$yhendus->prepare("UPDATE kasutaja SET aktiivne=0 WHERE id=?");
@@ -24,6 +30,8 @@ $kask->execute();
 <!doctype html>
 <html>
 <head>
+	<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
+	<link rel="stylesheet" type="text/css" href="stiil.css">
 <title>Administraator</title>
 </head>
 <body>

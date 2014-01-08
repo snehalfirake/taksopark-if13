@@ -22,11 +22,8 @@
 <!doctype html>
 <html>
   <head>
-  
-
- <link rel="stylesheet" type="text/css" href="stiil.css">
- <meta charset="UTF-8">
-
+	<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
+	<link rel="stylesheet" type="text/css" href="stiil.css">
      <title>TaxiGO log in</title>
   </head>
   <body>

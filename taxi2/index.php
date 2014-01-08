@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-	<img src="pildid/taxigo1.jpg" alt="logo" width="350" height="150">
+
 	<link rel="stylesheet" type="text/css" href="stiil.css">
 		<title>TaxiGO</title>
 		<meta charset="utf-8" />

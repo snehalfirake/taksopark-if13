@@ -6,7 +6,8 @@ CREATE TABLE tellimus(
 	tel_nr INT,
 	autojuht VARCHAR (100),
 	kinnitatud INT DEFAULT 0,
-	valmis INT DEFAULT 0
+	valmis INT DEFAULT 0,
+	vastuvoetud INT DEFAULT 0
 );
 
 
